@@ -95,4 +95,4 @@ Thumbs.db
 # для добавления к отслеживанию добавляем записи здесь
 !wp-content/mu-plugins/example-mu-plugin/
 !wp-content/plugins/example-plugin/
-!wp-content/themes/example-theme/
+!wp-content/themes/wedding_salon/
