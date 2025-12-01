@@ -39,9 +39,10 @@ ehthumbs.db
 # Белый список наших файлов
 # -----------------------------------------------------------------
 
+# Отслеживаем все файлы внутри темы wedding_salon
+!wp-content/themes/wedding_salon/**
+
+# Отслеживаем основные файлы
 !.gitignore
 !README.md
 !composer.json
-!style.css
-!functions.php
-!index.php
