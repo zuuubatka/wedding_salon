@@ -1,0 +1,98 @@
+# -----------------------------------------------------------------
+# .gitignore для вордпресс
+# По умолчанию все файлы игнорируются, для отслеживания файлы нужно добавить в
+# список отслеживания любые плагины или темы которые вы захотите добавить в
+# репозиторий
+#
+# Для игнорирования не закоммиченых изменений в уже отслеживаемых файлах
+# используйте:
+# git update-index --assume-unchanged
+#
+# Чтобы прекратить отслеживание файла который отслеживается используйте:
+# git rm --cached
+# -----------------------------------------------------------------
+
+# игнорируем всё находящееся в корне проекта кроме папки "wp-content"
+/*
+!wp-content/
+
+# игнорируем всё находящееся в папке "wp-content" кроме:
+# папок my-plugins, plugins и themes
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+
+# Игнорируем всё находящееся в папках mu-plugins, plugins, и themes
+# если это не было явно указано в белом списке в конце файла
+wp-content/mu-plugins/*
+wp-content/plugins/*
+wp-content/themes/*
+
+# Игнорируем все файлы имена которых начинаюся с "." или "~"
+.*
+~*
+
+# Игнорируем папку зависимостей node (используется grunt)
+node_modules/
+
+# Игнорируем файлы генериуемые операционными системами
+ehthumbs.db
+Thumbs.db
+
+# Игнорируем файлы настроек редакторов
+/.vscode
+/.idea
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# Игнорируем файлы журналирования и баз данных
+*.log
+*.sql
+*.sqlite
+
+# Игнорируем скомпилированные файлы
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Игнорируем файлы архивов
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# -------------------------
+# НАЧАЛО Белого списка 
+# -------------------------
+
+# Отслеживаем эти файлы если они есть
+!.gitignore
+!.editorconfig
+!README.md
+!CHANGELOG.md
+!composer.json
+
+# Отслеживаем файлы фавиконок если они есть
+!android-chrome-*.png
+!apple-touch-icon*.png
+!browserconfig.xml
+!favicon*.png
+!favicon*.ico
+!manifest.json
+!mstile-*.png
+!safari-pinned-tab.svg
+
+# отслеживаем изменения наши плагины и темы
+# для добавления к отслеживанию добавляем записи здесь
+!wp-content/mu-plugins/example-mu-plugin/
+!wp-content/plugins/example-plugin/
+!wp-content/themes/example-theme/
