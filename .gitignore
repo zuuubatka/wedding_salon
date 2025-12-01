@@ -7,12 +7,10 @@
 !wp-content/
 
 # Игнорируем всё в wp-content, кроме нужных директорий
-wp-content/*
-!wp-content/themes/
-!wp-content/uploads/
+
 
 # Игнорируем все темы кроме нашей
-wp-content/themes/*
+
 !wp-content/themes/wedding_salon/
 
 # Игнорируем скрытые файлы и временные
@@ -41,7 +39,6 @@ ehthumbs.db
 
 # Отслеживаем все файлы внутри темы wedding_salon
 !wp-content/themes/wedding_salon/**
-
 # Отслеживаем основные файлы
 !.gitignore
 !README.md
