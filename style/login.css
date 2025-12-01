@@ -1,0 +1,62 @@
+.admin-login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.admin-login-box {
+    width: 320px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
+.admin-login-box h2 { margin-bottom: 20px; color: #440000; }
+.admin-login-box input[type="text"],
+.admin-login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.admin-login-box button {
+    background-color: #FAD4DA;
+    color: #440000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Comfortaa', cursive;
+}
+.admin-login-box button:hover { background-color: #f7bfc8; }
+.show-password {
+    font-size: 12px;
+    margin-top: 5px;
+    cursor: pointer;
+    display: block;
+    color: #440000;
+}
+.login-error { color: red; margin-bottom: 10px; font-size: 14px; }
+
+.password-wrapper {
+    position: relative;
+   /* width: 250px;*/
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.toggle-eye {
+    position: absolute;
+    right: 8px;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}

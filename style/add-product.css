@@ -1,0 +1,225 @@
+body, input, select, textarea, button {
+    font-family: 'Raleway', sans-serif;
+    color: #440000;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+}
+
+select {
+    background-color: white;
+}
+
+.add-product-form {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 900px;
+    margin: auto;
+    align-items: flex-start;
+}
+
+.tovar {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.photo {
+    width: 40%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование всех дочерних элементов по горизонтали */
+    text-align: center; /* Центрирование текста */
+}
+
+.photo-header {
+    width: 100%; /* Занимает всю ширину для правильного центрирования */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    gap: 15px; /* Расстояние между заголовком и кнопкой */
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    
+}
+
+.photo-header h1 { /* Изменено с h1 на h2, если это подзаголовок */
+    margin-bottom: 0;
+    
+    text-align: center;
+    
+}
+
+.photo-container {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение карточек */
+    gap: 10px;
+    align-items: center; /* Центрирование карточек по горизонтали */
+    text-align: center;
+    width: 100%; /* Занимает всю ширину родителя */
+    flex: 1; /* Занимает всё доступное пространство */
+}
+
+.photo-block {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 220px; /* Фиксированная ширина */
+    max-width: 100%; /* Не выходит за границы контейнера */
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    background: #fafafa;
+    margin: 0 auto; /* Дополнительное центрирование блока */
+    cursor: pointer;
+}
+
+.photo-preview {
+    width: 100%;
+    border: 1px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fafafa;
+    aspect-ratio: 1 / 1.22;
+    margin: 0 auto; /* Центрирование превью */
+}
+
+.photo-preview img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto; /* Центрирование изображения */
+}
+
+.photo-block input[type="text"] {
+    width: 100%;
+    margin-top: 6px;
+    font-size: 12px;
+    text-align: center; /* Центрирование текста в поле */
+    box-sizing: border-box; /* Учитываем padding и border в ширине */
+}
+
+.remove-photo{
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+}
+.close-icon{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.btn-add-photo {
+    background: #FAD4DA;
+    color: white;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    white-space: nowrap; /* Предотвращает перенос текста */
+    
+}
+
+.btn-submit {
+    margin-top: 20px;
+    background: #FAD4DA;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cancel {
+    background: #FAD4DA;
+    color: #440000;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    flex: 1;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.size-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.size-box {
+    position: relative;
+    width: 65px;            /* делаем компактнее */
+    height: 50px; 
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #f0f0f0; /* неактивные серые */
+    transition: 0.2s;
+}
+
+.size-box.active {
+    background-color: white; /* активные белые */
+    border-color: #333;
+}
+
+.size-label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.size-qty {
+    margin-top: 5px;
+    width: 65px;  
+    text-align: center;
+}
+
+.confirm-modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index:100;
+}
+
+.confirm-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.confirm-content button {
+    margin: 5px;
+}

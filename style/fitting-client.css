@@ -1,0 +1,228 @@
+/* ===== Блок заявки на примерку ===== */
+.fitting-request {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 2px double #F7BCC9;
+  border-radius: 20px;
+  background-color: #fff0f2;
+  color: #440000;
+  font-family: 'Comfortaa', cursive;
+}
+
+.fitting-request h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.fitting-request form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.fitting-request .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.fitting-request label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.fitting-request input,
+.fitting-request textarea {
+  padding: 10px 15px;
+  border: 2px solid #F7BCC9;
+  border-radius: 15px;
+  font-family: 'Comfortaa', cursive;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.fitting-request input:focus,
+.fitting-request textarea:focus {
+  border-color: #f5a6b8;
+}
+
+.fitting-request textarea {
+  resize: vertical;
+}
+
+.fitting-request button.btn-submit {
+  grid-column: span 2;
+  padding: 12px 40px;
+  font-size: 18px;
+  font-family: 'Comfortaa', cursive;
+  background-color: #FAD4DA;
+  color: #440000;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  justify-self: center;
+}
+
+.fitting-request button.btn-submit:hover {
+  background-color: #f7bfc8;
+  transform: translateY(-2px);
+}
+
+/* Стили для <select>, чтобы выглядел как input */
+.fitting-request select {
+  padding: 10px 15px;
+  border: 2px solid #F7BCC9;
+  border-radius: 15px;
+  font-family: 'Comfortaa', cursive;
+  font-size: 16px;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+  appearance: none;   /* убираем дефолтную стрелку */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border-color 0.3s;
+}
+
+/* Фокус */
+.fitting-request select:focus {
+  border-color: #f5a6b8;
+}
+
+/* Контейнер для красивой стрелочки */
+.fitting-request .form-group {
+  position: relative;
+}
+
+
+
+.form-message {
+  grid-column: span 2;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 16px;
+  color: green;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+  .fitting-request form {
+    grid-template-columns: 1fr;
+  }
+
+  .fitting-request button.btn-submit {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
+/* Общая оболочка */
+.flatpickr-calendar {
+    font-family: 'Comfortaa', cursive;
+     
+}
+
+/* Выбранная дата */
+/*
+.flatpickr-day.selected {
+    background: #FAD4DA !important;
+    color: #000000 !important;
+    border-color: #FAD4DA !important;
+}*/
+
+/* Hover */
+.flatpickr-day.disabled-date:hover {
+    background: #ebebeb !important;
+    color: #999 !important;
+  /*  border-radius: 0 !important;*/
+    cursor: not-allowed !important;
+    
+}
+
+
+.flatpickr-day:not(.disabled-date):hover {
+    background: #f7bfc8 !important;
+   /* border-radius: 50%;*/
+}
+
+
+/* доступные — белые */
+
+.flatpickr-day.available-date {
+   /* background: #ffffff !important;
+    color: #000 !important;
+    border-radius: 6px;*/
+    border: 1px solid #f7bfc8 ;
+}
+
+/* недоступные — серые */
+.flatpickr-day.disabled-date {
+    background: #e9e9e9 !important;
+    color: #b2b2b2 !important;
+    cursor: not-allowed !important;
+    border-radius:50%;
+   
+    margin-top:2px;
+    margin-bottom:2px;
+}
+
+/* выбранная — розовая */
+.flatpickr-day.selected {
+    background: #f7bfc8 !important;
+ color: #000000 !important;
+    border:none;
+    border-radius: 50%;
+}
+
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+    visibility: hidden;
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-window {
+    background: white;
+    padding: 30px;
+    width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.modal-window h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.modal-buttons {
+    margin-top: 20px;
+}
+
+#modalClose {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #e36f9a;
+    color: #fff;
+    cursor: pointer;
+}
+
+#modalClose:hover {
+    background: #d25787;
+}

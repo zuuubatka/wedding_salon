@@ -1,0 +1,110 @@
+/* ===== ИЗБРАННОЕ ===== */
+
+/* Контейнер поиска — справа вверху */
+.favorite-search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right:40px;
+    position: relative;
+    width:40%;
+    margin-left:auto;
+    margin-bottom:0;
+    gap:10px;
+}
+
+/* Поле ввода */
+.favorite-search .search-input {
+    width: 70%;
+    padding: 10px 14px 10px 38px; /* место под иконку */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23bbb' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27a6.471 6.471 0 0 0 1.48-5.34C15.36 5.59 13.28 3.5 10.64 3.5S5.91 5.59 5.91 8.39 7.99 13.27 10.63 13.27c1.61 0 3.05-.59 4.15-1.56l.27.28v.79l4.25 4.25c.39.39 1.02.39 1.41 0s.39-1.02 0-1.41L15.5 14zm-4.86 0C8.59 14 7 12.41 7 10.5S8.59 7 10.5 7s3.5 1.59 3.5 3.5S12.41 14 10.64 14z'/%3E%3C/svg%3E") no-repeat 12px center;
+    background-size: 18px;
+    font-size: 15px;
+    color: #333;
+    transition: border-color 0.2s ease;
+}
+
+.favorite-search .search-input::placeholder {
+    color: #aaa;
+}
+
+.favorite-search .search-input:focus {
+    border-color: #f7bfc8;
+    outline: none;
+}
+
+/* Кнопка поиска */
+.favorite-search .btn-apply {
+   /* margin-left: 10px;*/
+    background: #fff;
+    border: 1px solid #ffb3c1;
+    border-radius: 8px;
+    color: #440000;
+    font-weight: 600;
+   /* padding: 10px 16px;*/
+    margin:0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width:25%;
+}
+
+.favorite-search .btn-apply:hover {
+    background: #ffb3c1;
+    color: #fff;
+}
+
+/* Сетка карточек товаров */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 карточки в ряд */
+    gap: 25px;
+    padding: 20px 40px;
+    width: 100%;
+    /*height:100%;*/
+   /* box-sizing: border-box;*/
+}
+
+/* Карточка товара */
+.product-card {
+    position: relative; /* для будущего сердечка поверх */
+    background: #fff;
+   /* border-radius: 12px;*/
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    /*max-width: 250px; /* ограничиваем ширину карточки */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+    width: 100%;
+   /* height: 200px;*/
+    object-fit: cover;
+  /*  border-radius: 10px;*/
+    margin-bottom: 5px;
+    display: block;
+    aspect-ratio: 1 / 1.22;
+}
+
+.product-card h4 {
+    font-size: 17px;
+    margin: 8px 0 4px;
+    color: #440000;
+}
+
+.product-card p {
+    color: #555;
+    font-weight: 500;
+}
+
+

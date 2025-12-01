@@ -1,41 +1,13 @@
-# Игнорируем всё в корне проекта, кроме wp-content
-/*
-!wp-content/
-
-# Игнорируем всё в wp-content, кроме нужных директорий
-wp-content/*
-!wp-content/themes/
-!wp-content/uploads/
-
-# Игнорируем все темы кроме нашей
-wp-content/themes/*
-!wp-content/themes/wedding_salon/
-!wp-content/themes/wedding_salon/**
-
-# Игнорируем скрытые файлы и временные
-.* 
+# Системные и временные файлы
+.DS_Store
+Thumbs.db
+ehthumbs.db
 ~*
 
-# Игнорируем node_modules и компилируемые файлы
+# Node.js зависимости (если используешь)
 node_modules/
+
+# Логи и базы данных
 *.log
 *.sql
 *.sqlite
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-# Игнорируем системные файлы Windows и macOS
-Thumbs.db
-ehthumbs.db
-.DS_Store
-
-# Белый список важных файлов темы
-!.gitignore
-!README.md
-!composer.json
-!style.css
-!functions.php
-!index.php

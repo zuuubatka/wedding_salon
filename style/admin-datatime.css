@@ -1,0 +1,131 @@
+.container{
+    padding:30px;
+}
+
+.addanddelete{
+    display:flex; 
+    justify-content:space-between; 
+    align-items:flex-start; 
+    margin-bottom:30px;
+}
+h1{
+    font-family:'Comfortaa', cursive; 
+    margin-bottom:20px;
+}
+.add-slot{
+    background:#FDE8EC; 
+    padding:20px; 
+    border-radius:10px; 
+    width:70%;
+}
+#form-message{
+    margin-top:10px;
+}
+#add-slot-form{
+    display:flex; 
+    gap:15px; 
+    flex-wrap:wrap; 
+    align-items:center;
+}
+
+th{
+    padding:10px; 
+    border:1px solid #ccc;
+}
+td{
+    padding:8px; 
+    border:1px solid #ccc;
+}
+.btn-book, #delete-selected {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #F8C2CC;                /* основной розовый */
+    color: #ffffff;                 /* тёмно-розовый текст под твой стиль */
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: 0.25s ease;
+    box-shadow: 0 4px 10px rgba(250, 212, 218, 0.6); /* мягкая тень */
+}
+
+.btn-book:hover, #delete-selected:hover{
+   /* background: #F8C2CC;            /* чуть насыщеннее */
+    box-shadow: 0 6px 14px rgba(250, 212, 218, 0.7);
+    transform: translateY(-2px);
+}
+
+.btn-book:active, #delete-selected:active{
+    background: #F4B0BE;            /* ещё глубже при клике */
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(250, 212, 218, 0.5);
+}
+
+
+
+/* Модальное окно */
+/* Модальное окно */
+.modal {
+    display: none; /* скрыто по умолчанию */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6); /* затемнение фона */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Содержимое модального окна */
+.modal-content {
+    background-color: #fff;
+    width: 500px;        /* увеличенная ширина */
+    max-width: 90%;      /* адаптивно для маленьких экранов */
+    padding: 40px;       /* увеличенный padding */
+    border-radius: 16px; /* более крупные скругления */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.25);
+    font-family: 'Inter', 'Montserrat', sans-serif;
+}
+
+/* Текст внутри модалки */
+.modal-content p {
+    font-size: 18px;  
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Кнопка закрытия X */
+.modal-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 28px; /* больше крестика */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Кнопка OK */
+.btn-ok {
+    padding: 12px 28px; /* увеличенная кнопка */
+    background: #FF6B80;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.btn-ok:hover {
+    opacity: 0.9;
+}
+
+

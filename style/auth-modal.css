@@ -1,0 +1,85 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.5);
+}
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+#send-code-btn {
+    background-color: pink;
+    color: #440000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#send-code-btn:hover {
+    background-color: #ffb3c1;
+}
+
+/* Модальное окно */
+#auth-modal {
+    display: none;
+    justify-content: center; /* по горизонтали */
+    align-items: center;     /* по вертикали */
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+/* Содержимое модального окна */
+#auth-modal .modal-content {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;      /* текст по центру */
+    display: flex;
+    flex-direction: column;
+    gap: 4px;                /* расстояние между элементами 4px */
+    width: 300px;            /* фиксированная ширина */
+}
+
+/* Поля ввода и кнопки */
+#auth-modal input[type="text"],
+#auth-modal input[type="email"],
+#auth-modal button {
+    width: 100%;             /* растягиваем на ширину контейнера */
+    padding: 3px;
+    margin-top:5px;
+    box-sizing: border-box;
+}
+
+/* Кнопки */
+#auth-modal button {
+    cursor: pointer;
+}
+
+/* Кнопка закрытия */
+#auth-modal .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}

@@ -1,0 +1,193 @@
+.admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F7BCC9;
+    padding: 10px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-family: 'Comfortaa', cursive;
+}
+
+.admin-logo img {
+    height: 40px;
+}
+
+.admin-nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #440000;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.admin-nav a:hover {
+    color: #fff;
+}
+
+.admin-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-role {
+    background: #fff;
+    border-radius: 12px;
+    padding: 3px 8px;
+    font-size: 13px;
+    color: #440000;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #440000;
+}
+
+.logout-btn img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    /*transition: transform 0.2s;*/
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #440000;
+    box-sizing: border-box;
+}
+
+html {
+    margin-top: 0 !important; /* убираем отступ админ-бара */
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column; /* вертикальное расположение */
+    min-height: 100vh;
+}
+html, body {
+    height: 100%;       /* важно для flex */
+    margin: 0;
+    padding: 0;
+}
+.site-content {
+    flex: 1;               /* основной контент занимает всё свободное место */
+}
+/* ===== Шапка сайта ===== */
+.site-header {
+    font-family: 'Comfortaa', cursive;
+    background: #FDE8EC;
+    /*box-shadow: 0 2px 10px rgba(0,0,0,0.05);*/
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+/* Контейнер */
+.container {
+    width: 100%; 
+   
+    padding: 0 20px;
+}
+
+/* Flex-контейнер для хедера */
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    gap: 20px;
+}
+
+/* ===== Логотип ===== */
+.header-inner .logo {
+    flex: 0 0 15%; /* логотип занимает 20% ширины */
+}
+
+.header-inner .logo img {
+    height: 50px;
+    max-width: 100%;
+}
+
+/* ===== Меню ===== */
+.header-inner .main-nav {
+    flex: 0 0 55%; /* меню занимает 60% */
+}
+
+.main-navigation {
+    text-align: center;
+}
+
+.main-navigation .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* меню по центру */
+    gap: 8%;
+}
+
+.main-navigation .menu li a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s;
+    
+}
+
+.main-navigation .menu li {
+    position: relative; /* теперь подменю будет позиционироваться относительно этого li */
+}
+.main-navigation .menu li a:hover {
+    color: #e0a3b0;
+}
+
+/* Подменю */
+.main-navigation .menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;           /* начало подменю с середины родителя */
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px 0;
+    list-style: none;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    /*min-width: 180px;*/
+    /*text-align:left;*/
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    z-index: 100;
+    width: 200px;
+}
+
+.main-navigation .menu li:hover > ul {
+    display: block;
+}
+
+.main-navigation .menu li ul li {
+    padding: 5px 15px;
+}
+
+.main-navigation .menu li ul li a:hover {
+    color: #e0a3b0;
+}
+
+.main-navigation .menu > li.menu-item-has-children > a::after {
+    content: " ▼";
+    font-size: 12px;
+}
+
+
+.logout-btn:hover {
+    transform: scale(1.1);
+}
+
+.logout-btn img {
+    width: 40px;   /* подбираем размер значка */
+    height: 40px;
+}

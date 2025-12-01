@@ -1,0 +1,46 @@
+.size-item.unavailable { background-color:#e0e0e0; cursor:not-allowed; color:#888; }
+.size-item.in-fitting { background-color:pink; color:white; cursor:pointer; }
+.size-item.selected { transform: scale(1.2); border:2px solid #440000; }
+.size-item {
+    width: 45px;
+   height: 30px;
+    line-height: 30px; /* вертикальное центрирование */
+    text-align: center; /* горизонтальное центрирование */
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    cursor: default;
+    /*border-radius: 4px;*/
+    background-color: white;
+}
+.sizes-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px; /* расстояние между "ячейками" */
+}
+
+.size-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.size-item.unavailable {
+    background-color:#e0e0e0;
+    color:#888;
+}
+
+/* Нижний квадратик с количеством */
+.size-qty-box {
+    display:inline-block; border:1px solid #ccc; padding:5px 10px; margin:2px; cursor:pointer; transition: all 0.2s ease; font-weight:bold;
+    width:45px;
+     height: 30px;
+    text-align: center;
+}
+
+.size-qty-box.empty {
+    border: none;
+    background: transparent;
+}
